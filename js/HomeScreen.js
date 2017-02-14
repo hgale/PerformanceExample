@@ -29,12 +29,10 @@ class HomeScreen extends React.Component {
 
   renderImageCells (cellTitle, cellData) {
     return (
-      <BgView>
       <View key={cellTitle} style={style.imageCellsContainer}>
         <Text style={style.cellTitle}>{cellTitle}</Text>
         {this.renderCells(cellData)}
       </View>
-      </BgView>
     )
   }
 
@@ -43,7 +41,7 @@ class HomeScreen extends React.Component {
     const { navigate } = this.props.navigation
     let cells = this.renderImageCells('Cats', CatImages)
     return (
-      <View style = {{backgroundColor: 'red', justifyContent: 'center'}}>
+      <BgView>
         <Button
           onPress={() => navigate('Second')}
           title="Go to second Screen"
@@ -51,7 +49,7 @@ class HomeScreen extends React.Component {
         <ScrollView contentContainerStyle={{justifyContent: 'center'}} style={[{height:height}]}>
           {cells}
         </ScrollView>
-      </View>
+      </BgView>
     );
   }
 }

@@ -58,7 +58,7 @@ export default StyleSheet.create({
   },
   pageBackground: {
     flex: 1,
-    resizeMode: 'center',
+    resizeMode: 'cover',
     width: null,
     height: null,
     backgroundColor: '#2B2C2C'
