@@ -38,14 +38,9 @@ class HomeScreen extends React.Component {
 
   render() {
     const { height } = Dimensions.get('window')
-    const { navigate } = this.props.navigation
     let cells = this.renderImageCells('Cats', CatImages)
     return (
       <BgView>
-        <Button
-          onPress={() => navigate('Second')}
-          title="Go to second Screen"
-        />
         <ScrollView contentContainerStyle={{justifyContent: 'center'}} style={[{height:height}]}>
           {cells}
         </ScrollView>
