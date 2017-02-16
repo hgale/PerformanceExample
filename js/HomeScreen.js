@@ -7,10 +7,6 @@ import { BgView } from './Background'
 import style from './Style'
 
 class HomeScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Home Screen'
-  }
-
   renderCells (data) {
     return data.map((cell, index) => {
       const {title, subTitle, small} = cell
