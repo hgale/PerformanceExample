@@ -5,7 +5,6 @@ export default StyleSheet.create({
     flexDirection: 'column',
     flex:1,
     justifyContent:'center',
-    backgroundColor: 'transparent',
     paddingTop: 20,
     paddingLeft: 24,
     paddingRight: 24,
@@ -20,13 +19,12 @@ export default StyleSheet.create({
   imageContainer: {
     height: 200,
     flex: 0.8,
-    resizeMode: 'cover',
-    justifyContent:'flex-end'
+    //resizeMode: 'cover',
+    // justifyContent:'flex-end'
   },
   imageText: {
     width: 100,
     height: 50,
-    backgroundColor: 'transparent',
     flexDirection: 'column',
     justifyContent:'flex-end'
   },
@@ -48,18 +46,12 @@ export default StyleSheet.create({
   baseView: {
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'flex-start',
-    alignItems: 'stretch',
-    backgroundColor: '#2B2C2C',
     paddingTop: 80,
     paddingRight: 12,
     paddingBottom: 20,
     paddingLeft: 12
   },
   pageBackground: {
-    flex: 1,
-    width: null,
-    height: null,
-    backgroundColor: '#2B2C2C'
+    flex: 1
   }
 })
