@@ -8,12 +8,13 @@
   },
   "dependencies": {
     "react": "15.4.2",
-    "react-native": "0.41.2"
+    "react-native": "0.41.2",
+    "react-native-sglistview": "^0.3.2"
   },
   "devDependencies": {
     "babel-jest": "18.0.0",
     "babel-preset-react-native": "1.9.1",
-    "react-addons-perf": "^15.4.2",    
+    "react-addons-perf": "^15.4.2",
     "jest": "18.1.0",
     "react-test-renderer": "15.4.2"
   },
