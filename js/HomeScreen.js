@@ -1,11 +1,14 @@
 import React from 'react'
 import { Text, View, Button, Dimensions, Image, ScrollView, ListView } from 'react-native'
-
+//import { SGListView } from 'react-native-sglistview'
+var SGListView = require('react-native-sglistview');
 import { CatImages } from './GiphyImages'
 
 import ImageRow from './ImageRow'
 import { BgView } from './Background'
 import style from './Style'
+
+var LIST_VIEW = "listview";
 
 class HomeScreen extends React.Component {
   constructor(props) {
@@ -55,12 +58,30 @@ class HomeScreen extends React.Component {
     )
   }
   */
-
   render () {
+    /*
+    return (
+      <BgView>
+        <SGListView
+          initialListSize={3}
+          pageSize={6}
+          contentContainerStyle={{justifyContent: 'center'}}
+          dataSource={this.state.dataSource}
+          stickyHeaderIndices={[]}
+          onEndReachedThreshold={1000}
+          scrollRenderAheadDistance={1000}
+          ref={LIST_VIEW}
+          renderRow={(rowData) => <ImageRow {...rowData} />}
+        />
+      </BgView>
+    )
+*/
+
     return (
       <BgView>
         <ListView
-          initialListSize={3}
+        initialListSize={3}
+         pageSize={3}
           contentContainerStyle={{justifyContent: 'center'}}
           dataSource={this.state.dataSource}
           renderRow={(rowData) => <ImageRow {...rowData} />}
