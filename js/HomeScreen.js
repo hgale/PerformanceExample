@@ -71,6 +71,7 @@ class HomeScreen extends React.Component {
   */
   render () {
     /*
+<<<<<<< HEAD
     return (
       <BgView>
         <SGListView
@@ -94,7 +95,6 @@ class HomeScreen extends React.Component {
         <ListView
           initialListSize={3}
           pageSize={3}
-          removeClippedSubviews={true}
           contentContainerStyle={{justifyContent: 'center'}}
           dataSource={this.state.dataSource}
           renderRow={(rowData) => <ImageRow {...rowData} />}
