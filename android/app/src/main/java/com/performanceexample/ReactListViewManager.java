@@ -13,8 +13,6 @@ import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.ViewProps;
 import com.facebook.react.uimanager.annotations.ReactProp;
 
-import com.facebook.drawee.backends.pipeline.Fresco;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -42,8 +40,6 @@ public class ReactListViewManager extends SimpleViewManager<RecyclerView> {
 
     @Override
     protected RecyclerView createViewInstance(ThemedReactContext reactContext) {
-        // This probably needs to happen in another place or maybe not at all because of react native, consider commenting out
-        Fresco.initialize(reactContext);
         mAdapter = new CustomAdapter(list);
         return new RecyclerView(reactContext);
     }
@@ -55,13 +51,10 @@ public class ReactListViewManager extends SimpleViewManager<RecyclerView> {
             view.setLayoutManager(mLayoutManager);
             view.setItemAnimator(new DefaultItemAnimator());
             view.setAdapter(mAdapter);
-            prepareMovieData(src);
-
-
-
+            prepareImageData(src);
     }
 
-    private void prepareMovieData(ReadableMap map){
+    private void prepareImageData(ReadableMap map){
 
         ReadableArray obj = map.getArray("images");
         for(int i = 0; i <obj.size() ; i++){
