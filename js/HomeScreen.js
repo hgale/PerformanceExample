@@ -8,16 +8,27 @@ import ImageRow from './ImageRow'
 import { BgView } from './Background'
 import style from './Style'
 
+import ListViewCustom from './AndroidImageList'
+
 var LIST_VIEW = "listview";
 
 class HomeScreen extends React.Component {
   constructor(props) {
     super(props)
-
+/*
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1.small !== r2.small})
     this.state = {
       dataSource: ds.cloneWithRows(CatImages)
     }
+    */
+    var array = [];
+    for(var i  = 0; i < CatImages.length; i++){
+      catImage = CatImages[i]
+      array.push({"uri" : catImage.small})
+    }
+    this.state = {
+      dataSource:{"images": array}
+    };
   }
 
   renderCells (data) {
@@ -77,6 +88,7 @@ class HomeScreen extends React.Component {
     )
 */
 
+/*
     return (
       <BgView>
         <ListView
@@ -89,6 +101,16 @@ class HomeScreen extends React.Component {
         />
       </BgView>
     )
+*/
+
+return (
+  <BgView>
+    <ListViewCustom
+      src={this.state.dataSource}
+      style={{flex:1,width:Dimensions.get('window').width,padding:0,margin:0}}>
+    </ListViewCustom>
+  </BgView>
+)
   }
 }
 
