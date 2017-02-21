@@ -71,7 +71,6 @@ class HomeScreen extends React.Component {
   */
   render () {
     /*
-<<<<<<< HEAD
     return (
       <BgView>
         <SGListView
