@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, View, Button, Dimensions, Image, ScrollView, ListView } from 'react-native'
 //import { SGListView } from 'react-native-sglistview'
-var SGListView = require('react-native-sglistview');
+//var SGListView = require('react-native-sglistview');
 import { CatImages } from './GiphyImages'
 
 import ImageRow from './ImageRow'
@@ -20,7 +20,8 @@ class HomeScreen extends React.Component {
     this.state = {
       dataSource: ds.cloneWithRows(CatImages)
     }
-    */
+*/
+
     var array = [];
     for(var i  = 0; i < CatImages.length; i++){
       catImage = CatImages[i]
@@ -87,7 +88,6 @@ class HomeScreen extends React.Component {
       </BgView>
     )
 */
-
 /*
     return (
       <BgView>
@@ -100,7 +100,7 @@ class HomeScreen extends React.Component {
         />
       </BgView>
     )
-*/
+    */
 
 return (
   <BgView>
@@ -110,6 +110,7 @@ return (
     </ListViewCustom>
   </BgView>
 )
+
   }
 }
 
