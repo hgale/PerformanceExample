@@ -23,22 +23,6 @@ export default StyleSheet.create({
     resizeMode: 'cover',
     justifyContent:'flex-end'
   },
-  imageText: {
-    width: 100,
-    height: 50,
-    backgroundColor: 'transparent',
-    flexDirection: 'column',
-    justifyContent:'flex-end'
-  },
-  imageTitle: {
-    color: 'white',
-    fontSize: 20
-  },
-  imageSubTitle: {
-    color: 'white',
-    fontSize: 18,
-    marginBottom: 5
-  },
   cellTitle: {
     color: 'black',
     fontSize: 29,
