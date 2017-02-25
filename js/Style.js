@@ -14,7 +14,10 @@ export default StyleSheet.create({
   },
   cellContainer: {
     flexDirection: 'row',
-    paddingBottom: 10
+    paddingTop: 10,
+    paddingLeft: 24,
+    paddingRight: 24,
+    elevation: 2
   },
   imageContainer: {
     height: 200,
