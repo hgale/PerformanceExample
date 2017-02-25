@@ -5,7 +5,6 @@ export default StyleSheet.create({
     flexDirection: 'column',
     flex:1,
     justifyContent:'center',
-    backgroundColor: 'transparent',
     paddingTop: 20,
     paddingLeft: 24,
     paddingRight: 24,
@@ -15,12 +14,14 @@ export default StyleSheet.create({
   },
   cellContainer: {
     flexDirection: 'row',
-    paddingBottom: 10
+    paddingTop: 10,
+    paddingLeft: 24,
+    paddingRight: 24,
+    elevation: 2
   },
   imageContainer: {
     height: 200,
     flex: 0.8,
-    resizeMode: 'cover',
     justifyContent:'flex-end'
   },
   cellTitle: {
@@ -34,7 +35,6 @@ export default StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'stretch',
-    backgroundColor: '#2B2C2C',
     paddingTop: 80,
     paddingRight: 12,
     paddingBottom: 20,
@@ -43,7 +43,6 @@ export default StyleSheet.create({
   pageBackground: {
     flex: 1,
     width: null,
-    height: null,
-    backgroundColor: '#2B2C2C'
+    height: null
   }
 })
