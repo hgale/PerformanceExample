@@ -1,7 +1,6 @@
 import React from 'react'
 import { Image, View } from 'react-native'
 import bgImage from './assets/bg_transparent.png'
-//import bgImage from './assets/bg_solid.png'
 
 import style from './Style'
 
