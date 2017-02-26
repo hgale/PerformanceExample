@@ -1,42 +1,28 @@
 import React from 'react'
-import { Text, View, Button, Dimensions, Image, ScrollView } from 'react-native'
 
 import { FlickrImages } from './FlickrImages'
-
 import { BgView } from './Background'
-import style from './Style'
+
+import ListViewCustom from './AndroidImageList'
 
 class HomeScreen extends React.Component {
-  renderCells (data) {
-    return data.map((cell, index) => {
-      const {uri} = cell
-      return (
-        <View key={index} style={style.cellContainer}>
-          <Image style={style.imageContainer} source={{uri:uri}}>
-          </Image>
-        </View>
-      )
-    })
-  }
+  constructor(props) {
+    super(props)
 
-  renderImageCells (cellData) {
-    return (
-      <View style={style.imageCellsContainer}>
-        {this.renderCells(cellData)}
-      </View>
-    )
+    this.state = {
+      dataSource:{"images": FlickrImages}
+    }
   }
 
   render() {
-    const { height } = Dimensions.get('window')
-    let cells = this.renderImageCells(FlickrImages)
     return (
       <BgView>
-        <ScrollView contentContainerStyle={{justifyContent: 'center'}} style={[{height:height}]}>
-          {cells}
-        </ScrollView>
+      <ListViewCustom
+         src={this.state.dataSource}
+         style={{flex:1}}>
+       </ListViewCustom>
       </BgView>
-    );
+    )
   }
 }
 
