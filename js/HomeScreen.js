@@ -1,28 +1,26 @@
 import React from 'react'
-import { ListView } from 'react-native'
 
 import { FlickrImages } from './FlickrImages'
-import ImageRow from './ImageRow'
 import { BgView } from './Background'
-import style from './Style'
+
+import ListViewCustom from './AndroidImageList'
 
 class HomeScreen extends React.Component {
   constructor(props) {
     super(props)
-    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1.uri !== r2.uri})
+
     this.state = {
-      dataSource: ds.cloneWithRows(FlickrImages)
+      dataSource:{"images": FlickrImages}
     }
   }
 
   render() {
     return (
       <BgView>
-        <ListView
-          contentContainerStyle={{justifyContent: 'center'}}
-          dataSource={this.state.dataSource}
-          renderRow={(rowData) => <ImageRow {...rowData} />}
-        />
+      <ListViewCustom
+         src={this.state.dataSource}
+         style={{flex:1}}>
+       </ListViewCustom>
       </BgView>
     )
   }
